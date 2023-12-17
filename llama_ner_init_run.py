@@ -155,7 +155,7 @@ if __name__ == '__main__':
     FEW_SHOT_SIZE = 5
     SAMPLE_SIZE = 300
 
-    folder_path = '/home/rkt23/CPSC_488/CPSC_488_Data/'
+    folder_path = 'INSERT_BASE_FOLDER_PATH_HERE'
 
     # Filenames
 
@@ -211,8 +211,8 @@ if __name__ == '__main__':
     # Load the LLaMA model
     model_name = "meta-llama/Llama-2-7b-chat-hf"
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name, token="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")
-    model = AutoModelForCausalLM.from_pretrained(model_name, token="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", device_map = 'auto')
+    tokenizer = AutoTokenizer.from_pretrained(model_name, token="INSERT_TOKEN_HERE")
+    model = AutoModelForCausalLM.from_pretrained(model_name, token="INSERT_TOKEN_HERE", device_map = 'auto')
 
     print("ENGLISH")
     en_prediction_filepath = folder_path + "en_cleaned_predicted_tags_100.txt"
