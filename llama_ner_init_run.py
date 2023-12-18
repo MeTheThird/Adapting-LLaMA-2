@@ -215,25 +215,43 @@ if __name__ == '__main__':
     model = AutoModelForCausalLM.from_pretrained(model_name, token="INSERT_TOKEN_HERE", device_map = 'auto')
 
     print("ENGLISH")
-    en_prediction_filepath = folder_path + "en_cleaned_predicted_tags_100.txt"
+    en_prediction_filepath = folder_path + "en_prediction_vs_reference_tags.txt"
     en_score_filepath = folder_path + "en_score.txt"
     evaluate_for_language(model, tokenizer, "English", en_test_ner_data_sample, en_test_ner_data_few_shot, en_prediction_filepath, en_score_filepath)
     print()
 
+    print("BANGLA")
+    bn_prediction_filepath = folder_path + "bn_prediction_vs_reference_tags.txt"
+    bn_score_filepath = folder_path + "bn_score.txt"
+    evaluate_for_language(model, tokenizer, "Bangla", bn_test_ner_data_sample, bn_test_ner_data_few_shot, bn_prediction_filepath, bn_score_filepath)
+    print()
+
+    print("FARSI")
+    fa_prediction_filepath = folder_path + "fa_prediction_vs_reference_tags.txt"
+    fa_score_filepath = folder_path + "fa_score.txt"
+    evaluate_for_language(model, tokenizer, "Farsi", fa_test_ner_data_sample, fa_test_ner_data_few_shot, fa_prediction_filepath, fa_score_filepath)
+    print()
+
+    print("HINDI")
+    hi_prediction_filepath = folder_path + "hi_prediction_vs_reference_tags.txt"
+    hi_score_filepath = folder_path + "hi_score.txt"
+    evaluate_for_language(model, tokenizer, "Hindi", hi_test_ner_data_sample, hi_test_ner_data_few_shot, hi_prediction_filepath, hi_score_filepath)
+    print()
+
     print("PORTUGUESE")
-    pt_prediction_filepath = folder_path + "pt_cleaned_predicted_tags_100.txt"
+    pt_prediction_filepath = folder_path + "pt_prediction_vs_reference_tags.txt"
     pt_score_filepath = folder_path + "pt_score.txt"
     evaluate_for_language(model, tokenizer, "Portuguese", pt_test_ner_data_sample, pt_test_ner_data_few_shot, pt_prediction_filepath, pt_score_filepath)
     print()
 
     print("ITALIAN")
-    it_prediction_filepath = folder_path + "it_cleaned_predicted_tags_100.txt"
+    it_prediction_filepath = folder_path + "it_prediction_vs_reference_tags.txt"
     it_score_filepath = folder_path + "it_score.txt"
     evaluate_for_language(model, tokenizer, "Italian", it_test_ner_data_sample, it_test_ner_data_few_shot, it_prediction_filepath, it_score_filepath)
     print()
 
     print("UKRAINIAN")
-    uk_prediction_filepath = folder_path + "uk_cleaned_predicted_tags_100.txt"
+    uk_prediction_filepath = folder_path + "uk_prediction_vs_reference_tags.txt"
     uk_score_filepath = folder_path + "uk_score.txt"
     evaluate_for_language(model, tokenizer, "Ukrainian", uk_test_ner_data_sample, uk_test_ner_data_few_shot, uk_prediction_filepath, uk_score_filepath)
     print()
