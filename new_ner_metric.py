@@ -1,6 +1,9 @@
 """
 Takes in the names of the prediction vs. reference tag files output by one of the main llama_ner
-python scripts, and evaluates the model output using our own custom NER evaluation metric
+python scripts, and evaluates the model output using our own custom NER evaluation metric, which is
+the accuracy of the generated entity tags irrespective of position (one metric includes the outside
+of entity set tag, and another excludes it), averaged across all test sentences for a given
+language.
 """
 
 import sys
