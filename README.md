@@ -16,13 +16,6 @@ Next, if you would like to use our less detailed prompting strategy with 5 few s
 
 In the file you choose to work with, change ```INSERT_BASE_FOLDER_PATH_HERE``` to the path to ```base_folder```, and change every instance of ```INSERT_TOKEN_HERE``` to a huggingface token associated with your huggingface account that will grant you access to the Llama-2-7b-chat-hf model. Then, ideally ensuring that you have access to a GPU with sufficient memory (we used an NVIDIA A100 GPU which has 40GB of memory), run the desired python file to generate the output files for each language. The file with ```score``` in the name will be the evaluation score for that language, the file with ```predicted_vs_reference``` in its name will contain the predicted vs. reference tags for each test sentence for that language, and the file with ```decoded_responses``` in its name will contain the full LLM decoded responses for each test sentence for that language. In order to generate our custom NER evaluation scores, simply run the ```new_ner_metric.py``` Python file with the ```predicted_vs_reference``` files for the languages for which you want to generate our custom NER evaluation scores as command line arguments to the Python script.
 
-## Computing Infrastructure Used
-
-We used the following as the primary components of our computing infrastructure:
-- OS: Red Hat Enterprise Linux 8.8 (Ootpa)
-- GPUs: 1 NVIDIA A100 GPU
-- CPUs: 12 Intel Xeon Gold 6326 CPUs.
-
 ## Random Seed Used
 
 We used the pandas random seed ```16``` for our random sampling to generate our results.
